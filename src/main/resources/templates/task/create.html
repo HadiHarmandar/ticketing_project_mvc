@@ -32,14 +32,14 @@
                                 <div class="panel-body">
 
                                     <!-- ------------------------FORM START----------------------------- -->
-                                    <form action="#">
+                                    <form action="#" th:object="${task}">
 
                                         <div class="row">
                                             <div class="col">
                                                 <div class="form-group">
                                                     <label>Project</label>
-                                                    <select name="project" class="custom-select">
-                                                        <option></option>
+                                                    <select th:field="*{project}" name="project" class="custom-select">
+                                                        <option th:each="project : ${projects}" th:text="${project.projectName}" th:value="${project.projectName}"></option>
                                                     </select>
                                                 </div>
                                             </div>
