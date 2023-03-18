@@ -60,7 +60,7 @@ public class UserController {
         return "/user/update";
     }
 
-    @GetMapping("/update")
+    @PostMapping("/update")
     public String updateUser(@ModelAttribute("user") UserDTO user) {
 
         userService.update(user);
